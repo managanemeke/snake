@@ -140,7 +140,7 @@ let level = document.createElement('div');
     level.textContent = `Ваш уровень: ${levelCount}`;
     area.before(level);
 
-//generate random pasition apple
+//generate random position apple
 function randomGenApple(min, max){
     min = Math.ceil(min);
     max = Math.floor(max);
