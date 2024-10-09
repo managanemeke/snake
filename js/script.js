@@ -135,10 +135,10 @@ let score = document.createElement('div');
     score.textContent = `Ваш счет: ${scoreCount}`;
     area.before(score);
 
-let lavel = document.createElement('div');
-    lavel.classList.add('score');
-    lavel.textContent = `Ваш уровень: ${levelCount}`;
-    area.before(lavel);
+let level = document.createElement('div');
+    level.classList.add('score');
+    level.textContent = `Ваш уровень: ${levelCount}`;
+    area.before(level);
 
 //generate random pasition apple
 function randomGenApple(min, max){
@@ -182,7 +182,7 @@ function levelUp(){
         levelCount++;
         gameSettings.speed = gameSettings.speed - (gameSettings.speed/100*10);
         scoreCountLevelUp = 0;
-        lavel.textContent = `Ваш уровень: ${levelCount}`;
+        level.textContent = `Ваш уровень: ${levelCount}`;
         clearInterval(interval);
         startGame(gameSettings.speed)
         
