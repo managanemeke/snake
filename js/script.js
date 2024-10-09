@@ -8,7 +8,7 @@ const gameSettings = {
 }
 
 let scoreCount = 0;
-let lavelCount = 1;
+let levelCount = 1;
 let scoreCountLevelUp = 0;
 
 let applePosition = {
@@ -137,7 +137,7 @@ let score = document.createElement('div');
 
 let lavel = document.createElement('div');
     lavel.classList.add('score');
-    lavel.textContent = `Ваш уровень: ${lavelCount}`;
+    lavel.textContent = `Ваш уровень: ${levelCount}`;
     area.before(lavel);
 
 //generate random pasition apple
@@ -179,10 +179,10 @@ function clearArea(){
 //level up
 function levelUp(){
     if (scoreCountLevelUp === 3 ) {
-        lavelCount++;
+        levelCount++;
         gameSettings.speed = gameSettings.speed - (gameSettings.speed/100*10);
         scoreCountLevelUp = 0;
-        lavel.textContent = `Ваш уровень: ${lavelCount}`;
+        lavel.textContent = `Ваш уровень: ${levelCount}`;
         clearInterval(interval);
         startGame(gameSettings.speed)
         
