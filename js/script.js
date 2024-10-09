@@ -113,8 +113,8 @@ const snake = {
 
     collisionSnake (){
         for (let i = 0; i< this.body.length; i++){
-            if (this.head.x == this.body[i]['x'] && 
-                this.head.y == this.body[i]['y']){
+            if (this.head.x === this.body[i]['x'] &&
+                this.head.y === this.body[i]['y']){
                     modalToggle();
                     return true;
                 }
@@ -122,8 +122,8 @@ const snake = {
     },
 
     collisionsApple(){
-        if (this.head.x == applePosition.x && 
-            this.head.y == applePosition.y){
+        if (this.head.x === applePosition.x &&
+            this.head.y === applePosition.y){
                 return true;
             }
     }
@@ -147,8 +147,8 @@ function randomGenApple(min, max){
     applePosition.x = Math.floor(Math.random() * (max - min) + min);
     applePosition.y = Math.floor(Math.random() * (max - min) + min);
     for (let i = 0; i< snake.body.length; i++){
-        if (applePosition.x == snake.body[i]['x'] && 
-            applePosition.x == snake.body[i]['y']){
+        if (applePosition.x === snake.body[i]['x'] &&
+            applePosition.x === snake.body[i]['y']){
                 randomGenApple(0, 25);
             }
     }  
@@ -208,7 +208,7 @@ function modalToggle(){
 
 //event keyboard
 document.addEventListener('keydown',(event) => {
-    if (event.code == 'Space') {
+    if (event.code === 'Space') {
                 clearInterval(interval);
     } else {snake.changeDirection(event.keyCode);
 
