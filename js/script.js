@@ -100,7 +100,7 @@ const snake = {
             
         }
     },
-//Collisions bodred, snake, apple
+//Collisions border, snake, apple
     collisionBorder(){
         if (this.head.x > 24 || 
             this.head.x < 0  ||
