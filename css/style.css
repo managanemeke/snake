@@ -17,47 +17,32 @@ body {
     justify-content: center;
     
 }
-.box {
-    border: 1px solid black;
-    position: absolute;
-    box-sizing: border-box;
-        box-shadow: 0 0 50px 30px #f6f5f7 inset;
-        z-index: 1;
-        
-        &::before {
-          position: relative;
-          content: '';
-          display: block;
-          box-shadow: 0 0 0 1px #818081;
-          padding-top: 100%;
-        }
-        
-        &::after {
-          position: absolute;
-          top: 0;
-          right: 1px;
-          bottom: 1px;
-          left: 0;
-          content: '';
-          box-shadow: 0 0 0 15px #918f91 inset;
-        }
-      
-}
-.apple {
+.box, .apple {
     border: 1px solid black;
     position: absolute;
     box-sizing: border-box;
     box-shadow: 0 0 50px 30px #f6f5f7 inset;
     z-index: 1;
-    
     &::before {
-      position: relative;
-      content: '';
-      display: block;
-      box-shadow: 0 0 0 1px #818081;
-      padding-top: 100%;
+        position: relative;
+        content: '';
+        display: block;
+        box-shadow: 0 0 0 1px #818081;
+        padding-top: 100%;
     }
-    
+}
+.box {
+    &::after {
+      position: absolute;
+      top: 0;
+      right: 1px;
+      bottom: 1px;
+      left: 0;
+      content: '';
+      box-shadow: 0 0 0 15px #918f91 inset;
+    }
+}
+.apple {
     &::after {
       position: absolute;
       top: 0;
