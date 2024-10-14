@@ -21,7 +21,6 @@ body {
     border: 1px solid black;
     position: absolute;
     box-sizing: border-box;
-        @extend %sprite;
         box-shadow: 0 0 50px 30px #f6f5f7 inset;
         z-index: 1;
         
@@ -48,7 +47,6 @@ body {
     border: 1px solid black;
     position: absolute;
     box-sizing: border-box;
-    @extend %sprite;
     box-shadow: 0 0 50px 30px #f6f5f7 inset;
     z-index: 1;
     
